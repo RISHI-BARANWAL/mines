@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dasboard.css">
+</head>
+<body>
+
+    <!-- Background Section -->
+    <div class="dashboard-header">
+        <img src="./images/backgroud.jpeg" alt="Background" class="background-img">
+    </div>
+
+    <!-- User Profile Section -->
+    <div class="user-profile">
+        <img src="./images/profile-pic.jpeg" alt="User Profile" class="profile-img">
+        <h2>John Doe</h2>
+        <p>Email: johndoe@gmail.com</p>
+        <p>Wallet ID: 1234-5678-9101</p>
+    </div>
+
+    <!-- Game List Section -->
+    <div class="game-list">
+        <div class="game-card" onclick="navigateTo('poker')">
+            <img src="./images/poker.jpeg" alt="Poker">
+            <h3>Poker</h3>
+        </div>
+        <div class="game-card" onclick="navigateTo('chess')">
+            <img src="./images/chess.jpeg" alt="Chess">
+            <h3>Chess</h3>
+        </div>
+        <div class="game-card" onclick="navigateTo('roulette')">
+            <img src="./images/roulette.jpeg" alt="Roulette">
+            <h3>Roulette</h3>
+        </div>
+        <div class="game-card" onclick="navigateTo('blackjack')">
+            <img src="./images/blackjack.jpeg" alt="Blackjack">
+            <h3>Blackjack</h3>
+        </div>
+        <div class="game-card" onclick="navigateTo('slots')">
+            <img src="./images/slots.jpeg" alt="Slots">
+            <h3>Slots</h3>
+        </div>
+        <div class="game-card" onclick="navigateTo('mines')">   <!-- "./index.html" -->
+            <img src="./images/mines.jpeg" alt="Mines">
+            <h3>Mines</h3>
+        </div>
+        <div class="game-card" onclick="navigateTo('checkers')">
+            <img src="./images/checkers.jpeg" alt="Checkers">
+            <h3>Checkers</h3>
+        </div>
+        <div class="game-card" onclick="navigateTo('8ballpool')">
+            <img src="./images/8ballpool.jpeg" alt="8ballpool">
+            <h3>8 Ball Pool</h3>
+        </div>
+        <div class="game-card" onclick="navigateTo('mario')">
+            <img src="./images/mario.jpg" alt="Mario">
+            <h3>Mario</h3>
+        </div>
+        <div class="game-card" onclick="navigateTo('angrybird')">
+            <img src="./images/angrybird.jpeg" alt="Angrybird">
+            <h3>Angry Bird</h3>
+        </div>
+    </div>
+
+    <script type="module">
+        function navigateTo(game) {
+            if (game === 'mines') {
+                //window.location.href = `/${game}.html`; // Redirect to the respective game page
+                // script.src = "../src/index.js"; // ✅ Load mines logic
+                window.location.replace("http://localhost:3000/");  // .replace
+            } else if (game === 'slots') {
+                // script.src = "../src/App.js"; // ✅ Load slots logic
+                window.location.href = `/${game}.html`;
+            } else {
+                console.warn('Unknown game:', game);
+                return;
+            }
+        }
+        window.navigateTo = navigateTo;
+    </script>
+
+</body>
+</html>

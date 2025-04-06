@@ -1,0 +1,285 @@
+/* .h11 {
+    color: red;
+    font-size: 24px;s
+    font-weight: bold;
+  } */
+
+  /* body {
+    font-family: Arial, sans-serif;
+    background: url('./images/backgroud.jpeg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+    object-fit: cover;
+}
+
+.user-details h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.user-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.game-progress {
+    margin-top: 20px;
+}
+
+.progress-bar-container {
+    width: 300px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #4CAF50;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+} 
+
+/* profile.html */
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('./images/backgroud.jpeg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-wrap: wrap;
+    background-size: cover;
+}
+
+#h3 {
+    position: absolute; 
+    justify-content: center;
+    margin-top: -500px !important;
+}
+
+.profile-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: left;
+    text-align: center;
+    width: 350px;
+    height: 400px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.profile-container:hover {
+    transform: scale(1.05);
+}
+
+.profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+    object-fit: cover;
+    transition: border-color 0.3s;
+}
+
+.profile-pic:hover {
+    border-color: #ff9800;
+}
+
+.user-details h2 {
+    margin: 10px 0;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.user-details h2:hover {
+    color: #4CAF50;
+}
+
+.user-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.game-progress {
+    margin-top: 20px;
+}
+
+.progress-bar-container {
+    width: 300px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
+    transition: background 0.3s;
+}
+
+.progress-bar-container:hover {
+    background: #ccc;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    padding: 8px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+}
+
+#gameHistory {
+    width: 100%;
+    padding: 0;
+    list-style: none !important;
+    text-align: left;
+    font-size: 14px;
+}
+
+.game-history-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    width: 520px;
+    height: 400px;
+    overflow-y: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+    transition: transform 0.3s;
+}
+.game-history-container:hover {
+    transform: scale(1.05);
+}
+
+.game-history-container h3 {
+    margin-bottom: 10px;
+}
+
+.game-history-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.game-history-container ul li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    display: inline-block; /* flex /  block */
+    /* justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.win {
+    color: green;
+    font-weight: bold;
+}
+
+.loss {
+    color: red;
+    font-weight: bold;
+}
+
+
+
+/* 📱 Responsive Design for Screens Below 1000px */
+@media screen and (max-width: 1000px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        background-size: cover;
+        min-height: 100vh;
+    }
+
+    #h3 {
+        position: relative;  /* absolute */
+        justify-content: center;
+        margin-top: 40px !important;  /* -2070px */
+    }
+
+    .profile-container,
+    .game-history-container {
+        width: 90%; /* Adjust width to fit smaller screens */
+        max-width: 400px; /* Prevents excessive stretching */
+        height: auto;
+        margin: 10px auto; /* Center on small screens */
+    }
+
+    .game-history-container {
+        /* margin-left: 0; */
+        justify-content: center;
+    }
+
+    .progress-bar-container {
+        width: 100%;
+    }
+}
+
+/* 📱 Extra Responsive Tweaks for Very Small Screens (360px to 480px) */
+@media screen and (max-width: 480px) {
+    .profile-container,
+    .game-history-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    .user-details h2 {
+        font-size: 18px;
+    }
+
+    .game-history-container ul li {
+        justify-content: center;
+        font-size: 10px;
+        padding: 6px;
+    }
+}
+
