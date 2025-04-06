@@ -397,7 +397,7 @@ app.post("/api/paypal/create-order", async (req, res) => { // ..... new added
 });
 
 app.post("/api/paypal/capture-order", async (req, res) => { // ..... new added
-  const { orderId, userId } = req.body;
+  const { orderId } = req.body; // , userId
   try {
     const token = await generatePayPalToken();
     const response = await axios.post(
@@ -408,7 +408,7 @@ app.post("/api/paypal/capture-order", async (req, res) => { // ..... new added
     if (response.data.status === "COMPLETED") {
       const amount = parseFloat(response.data.purchase_units[0].payments.captures[0].amount.value);
       const wallet = await Wallet.findOneAndUpdate(
-        //{ userId },       // ............required 
+        // userId ,       // ............required 
         { $inc: { wallet: amount } },
         { new: true, upsert: true }
       );
