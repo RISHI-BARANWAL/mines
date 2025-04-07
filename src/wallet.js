@@ -453,7 +453,7 @@ import axios from "axios";
   // ✅ Fetch Wallet Balance from backend and send to backend (imp)
   const fetchWalletBalance = useCallback(() => {
     // if (!userId) return;
-    fetch("http://localhost:5003/api/wallet") // /${userId}
+    fetch("http://localhost:5003/api/wallet")
       .then((response) => response.json())
       .then((data) => { 
         setWallet(data.balance);//) ✅ Set wallet with fetched balance
