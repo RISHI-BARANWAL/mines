@@ -9,11 +9,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
-
-#Web Link
+#Web Link (Online)
 visit:- https://linexprt.com/
-(Note take 20 sec to load, for testing only)
+(Note: take 20 sec to load or refresh twice, for testing only)
+
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
